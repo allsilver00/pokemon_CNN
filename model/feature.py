@@ -7,7 +7,7 @@ from model.model import FeatureExtractor
 
 def FeatureSave():
     fe = FeatureExtractor()
-    # Iterate through images (Change the path based on your image location)
+    #feature, image_path 저장
     feature_list = []
     img_paths = []
 
