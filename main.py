@@ -2,8 +2,8 @@
 
 from model.feature import FeatureSave 
 import settings
-from preprocessing import preprocess
-from result import visualize
+from data.preprocessing import preprocess
+from data.result import visualize
 
 
 
