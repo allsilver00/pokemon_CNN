@@ -1,14 +1,14 @@
 import os
 from PIL import Image
-from settings import START_PATH,NEW_PATH
 
 
 
 
-def preprocess():
+
+def preprocess(path,new_path):
        
-    for filename in os.listdir(START_PATH):
-        image = Image.open(START_PATH+"/"+filename)
+    for filename in os.listdir(path):
+        image = Image.open(path+"/"+filename)
         image = image.convert("RGBA")
         datas = image.getdata()
         
@@ -24,4 +24,4 @@ def preprocess():
                 # 나머지 요소는 변경하지 않습니다.
         
         image.putdata(newData)
-        image.save(NEW_PATH +'/'+filename, "PNG") # PNG 포맷으로 저장합니다.
+        image.save(new_path +'/'+filename, "PNG") # PNG 포맷으로 저장합니다.
